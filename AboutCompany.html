@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Express - About Company</title>
+	<link rel="stylesheet" type="text/css" href="css/AboutCompanyStyle.css"/>
+    <script type="text/javascript">
+        $(function() {
+          if ($.browser.msie && $.browser.version.substr(0,1)<7)
+          {
+			$('li').has('ul').mouseover(function(){
+				$(this).children('ul').show();
+				}).mouseout(function(){
+				$(this).children('ul').hide();
+				})
+          }
+        });        
+    </script>
+	
+	
+	
+	<style>
+		#line{
+			width:70%;
+			right:0%;
+			top:40px;
+			position:absolute;
+		}
+	
+		#menu
+		{
+			position:absolute;
+			right:15%;
+			top:60px;
+			width: 50%;
+			margin: 0;
+			padding: 10px 0 0 0;
+			list-style: none;  
+			background:#D6D6C2;
+			-moz-border-radius: 50px;
+			border-radius: 50px;
+			-moz-box-shadow: 0 2px 1px #9c9c9c;
+			-webkit-box-shadow: 0 2px 1px #9c9c9c;
+			box-shadow: 0 2px 1px #9c9c9c;
+		}
+
+		#menu li
+		{
+			float: left;
+			padding: 0 0 10px 0;
+			position: relative;
+			line-height: 0;
+		}
+
+		#menu a 
+		{
+			float: left;
+			height: 25px;
+			padding: 0 25px;
+			color: #111;
+			text-transform: uppercase;
+			font: bold 12px/25px Arial, Helvetica;
+			text-decoration: none;
+			text-shadow: 0 1px 0 #000;
+		}
+
+		#menu li:hover > a
+		{
+			color: gray;
+		}
+
+		*html #menu li a:hover /* IE6 */
+		{
+			color: gray;
+		}
+
+		#menu li:hover > ul
+		{
+			display: block;
+		}
+
+		/* Sub-menu */
+
+		#menu ul
+		{
+			list-style: none;
+			margin: 0;
+			padding: 0;    
+			display: none;
+			position: absolute;
+			top: 35px;
+			left: 0;
+			z-index: 99999;    
+			background:#D6D6C2 ;
+			
+			-moz-box-shadow: 0 0 2px rgba(255,255,255,.5);
+			-webkit-box-shadow: 0 0 2px rgba(255,255,255,.5);
+			box-shadow: 0 0 2px rgba(255,255,255,.5);	
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+
+		#menu ul ul
+		{
+		  top: 0;
+		  left: 150px;
+		}
+
+		#menu ul li
+		{
+			float: none;
+			margin: 0;
+			padding: 0;
+			display: block;  
+			
+		}
+
+		#menu ul li:last-child
+		{   
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;    
+		}
+
+		#menu ul a
+		{    
+			padding: 10px;
+			height: 10px;
+			width: 130px;
+			height: auto;
+			line-height: 1;
+			display: block;
+			white-space: nowrap;
+			float: none;
+			text-transform: none;
+		}
+
+		*html #menu ul a /* IE6 */
+		{    
+			height: 10px;
+		}
+
+		*:first-child+html #menu ul a /* IE7 */
+		{    
+			height: 10px;
+		}
+
+		#menu ul a:hover
+		{
+			background: 	#FFFFC2;
+			
+		}
+
+		#menu ul li:first-child > a
+		{
+			-moz-border-radius: 5px 5px 0 0;
+			border-radius: 5px 5px 0 0;
+		}
+
+		#menu ul li:first-child > a:after
+		{
+			content: '';
+			position: absolute;
+			left: 30px;
+			top: -8px;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 8px solid #444;
+		}
+
+		#menu ul ul li:first-child a:after
+		{
+			left: -8px;
+			top: 12px;
+			width: 0;
+			height: 0;
+			border-left: 0;	
+			border-bottom: 5px solid transparent;
+			border-top: 5px solid transparent;
+			border-right: 8px solid #444;
+		}
+
+		#menu ul li:first-child a:hover:after
+		{
+			border-bottom-color: #04acec; 
+		}
+
+		#menu ul ul li:first-child a:hover:after
+		{
+			border-right-color: #04acec; 
+			border-bottom-color: transparent; 	
+		}
+
+
+		#menu ul li:last-child > a
+		{
+			-moz-border-radius: 0 0 5px 5px;
+			border-radius: 0 0 5px 5px;
+		}
+
+		/* Clear floated elements */
+		#menu:after 
+		{
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+
+		* html #menu             { zoom: 1; } /* IE6 */
+		*:first-child+html #menu { zoom: 1; } /* IE7 */
+	</style>
+
+</head>
+
+<body>
+	 <div class="main">
+         <img id="logo" src="images/foodExpressLogo.jpg" alt="Food Express"/>
+		
+		<div class="head">
+			<div id="calls">
+				<img id="callimg" style="float:left" src="images/call.png" alt="call"/>
+					Questions? Call Us now!</br><span id="number">011 3071 5375 (11AM to 11PM)</span>
+			</div>
+			<button id="reg" href="#">Log in / Register</button>	
+			<hr id="line">
+			<ul id="menu">
+				<li><a href="Home.htm">Home</a></li>
+				<li>
+					<a href="Menu.htm">Menu</a>
+				</li>
+				<li>
+					<a href="#">About Us</a>
+					<ul>
+						<li>
+							<a href="#">About Company</a>
+						</li>
+						<li>
+
+							<a href="#">About Developers</a>
+							<ul>
+								<li>
+									<a href="MonicaProfile.html">Monica Malkani</a>							
+								</li>
+
+								<li>
+									<a href="BahulProfile.html">Bahul Jain</a>							
+								</li>
+							</ul>					
+						</li>
+					</ul>					
+				</li>		
+				<li>
+					<a href="ContactUs.htm">Contact Us</a>	
+				</li>
+				<li>
+
+					<a href="Help.html">Help</a>	
+				</li>
+			</ul>
+		</div>
+
+			<div class="AboutCompany">
+			
+			<h2>About Company</h2><hr id="stline">
+			<table>
+			<tr>
+			<td width="65%">
+			<div class="section1">
+			    <h3>Who is Food Express India</h3><br>
+				<p> We are a small team of problem solvers, designers, thinkers and tinkers, working around the clock to make FoodExpress 
+				the most powerful online tool for food delivery in the universe. We believe that ordering food should be easy, fast and definitely fun!
+				We wanted something simpler, so we made it.</p><br>
+				
+                <h3>Food Express Food Delivery</h3><br>
+				<p>Staying in the office for lunch? 
+				Tired of the same takeaways? No more wondering what is available near you. 
+				FoodExpress has online menus from the staggering selection of various dishes you like. 
+				Simply sign up and search for cuisine type, restaurant near by. 
+				The restaurant index also includes address and delivery hours. No online food delivery is too difficult for FoodExpress!
+				Food delivery service has never been made easier!</p>
+			<br>
+				Do you have any questions? Let us know!
+
+			</div>
+			</td>
+			<td 
+			<div class="section2">
+			<img src="images/waiter.jpg"/>
+			</div>
+			</td>
+			</tr>
+			
+			</table>
+			</div>
+		
+		<div class="bottom" >
+		<table cellpadding="5px">
+			<tr>
+				<td><h3>Popular Areas</h3></td>
+				<td><h3>Popular Cuisines</h3></td>
+				<td><h3>Follow Us On</h3></td>
+			</tr>
+			<tr>
+				<td><a href="ContactUs.htm">Bandra</a></td>
+				<td>North Indian</td>
+				<td>Twitter</td>
+			</tr>
+			<tr>
+				<td><a href="ContactUs.htm">Andheri</a></td>
+				<td>Mughlai</td>
+				<td>Facebook</td>
+			</tr>
+			<tr>
+				<td><a href="ContactUs.htm">Malad</a></td>
+				<td>Pizzas</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a href="ContactUs.htm">Dadar</a></td>
+				<td>Chinese</td>
+				<td><h3>Food Express</h3></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>South Indian</td>
+				<td><a href="AboutCompany.html">About Us</a></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Desserts</td>
+				<td><a href="ContactUs.htm">Contact Us</a></td>
+			</tr>
+		</table>
+				
+		<hr>
+		<hr id="hd">
+		<div align="center" style"float:left;margin-left:10px;">
+		<p style="font-family:Berlin Sans FB;font-size:18px"><h3>About Food Express</h3></p><br>
+		<p>At FoodExpress, we believe that ordering food should be simple, fast, and definitely enjoyable. Forget about the pain of cooking and washing up! Try a variety of your favorite dishes at home or at work. With a few simple clicks, FoodExpress can help you order food online. Warm and delicious food delivered straight to your doorstep. Discover exquisite food every day with Express.</p>
+		</div>
+		</div>
+    </div>
+</body>
+
+</html>

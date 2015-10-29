@@ -1,0 +1,230 @@
+<html>
+<head>
+<style>
+#b {
+width:50px;
+height:30px;
+}
+
+#tt
+{
+width:100%;
+}
+</style>
+<script>
+var num1;
+var num2;
+var ope;
+function fcal(num)
+{
+document.getElementById("tt").value+=num;
+}
+
+function back()
+{
+ var x=document.getElementById("tt").value;
+ x=x.substring(0,x.length-1);
+ 	document.getElementById("tt").value=x;
+	}
+function op(operator)
+{
+	num1= document.getElementById("tt").value;
+	ope=operator;
+	document.getElementById("tt").value="";
+}
+function square()
+{
+ var x= document.getElementById("tt").value;
+ x=x*x;
+ document.getElementById("tt").value=x;
+}
+function cube()
+{
+ var x= document.getElementById("tt").value;
+ x=x*x*x;
+ document.getElementById("tt").value=x;
+}
+function abso()
+{
+ var x= document.getElementById("tt").value;
+ x=Math.abs(x);
+ document.getElementById("tt").value=x;
+}
+function sin()
+{
+ var x= document.getElementById("tt").value;
+ x=x*Math.PI/180;
+ x=Math.sin(x);
+ document.getElementById("tt").value=x;
+}
+function cos()
+{
+ var x= document.getElementById("tt").value;
+ x=x*Math.PI/180;
+ x=Math.cos(x);
+ document.getElementById("tt").value=x;
+}
+function fact()
+{
+var f=[];
+var x= document.getElementById("tt").value;
+var y=1;
+for(var i=x;i>0;i--)
+{
+	y*=i;
+}
+document.getElementById("tt").value=y;
+}
+function tan()
+{
+ var x= document.getElementById("tt").value;
+ x=x*Math.PI/180;
+ x=Math.tan(x);
+ document.getElementById("tt").value=x;
+}
+
+function root()
+{
+ var x= document.getElementById("tt").value;
+ x=Math.sqrt(x);;
+ document.getElementById("tt").value=x;
+}
+
+function ln()
+{
+var x= document.getElementById("tt").value;
+x=Math.log(parseFloat(x));
+document.getElementById("tt").value=x;
+}
+function log()
+{
+var x= document.getElementById("tt").value;
+x=Math.log(parseFloat(x))/Math.log(10);
+document.getElementById("tt").value=x;
+}
+function inv()
+{
+var x= document.getElementById("tt").value;
+x=1/x;
+document.getElementById("tt").value=x;
+}
+function clr()
+{
+document.getElementById("tt").value="";
+num1="";
+num2="";
+operator=""; 
+}
+function equal()
+{
+	num2= document.getElementById("tt").value;
+	if(ope==="+")
+	{
+	var x=parseFloat(num1,10)+ parseFloat(num2,10);
+	var y=document.getElementById("tt");
+	y.value="";
+	y.value= y.value+ x;
+	}
+	if(ope=="-")	
+	{
+	var x=parseFloat(num1,10)- parseFloat(num2,10);
+	var y=document.getElementById("tt");
+	y.value="";
+	y.value= y.value+ x;
+	}
+	if(ope=="*")	
+	{
+	var x=num1 * num2;
+	var y=document.getElementById("tt");
+	y.value="";
+	y.value= y.value+ x;
+	}
+	if(ope=="/")	
+	{
+	var x=parseFloat(num1,10)/ parseFloat(num2,10);
+	var y=document.getElementById("tt");
+	y.value="";
+	y.value= y.value+ x;
+	}
+	if(ope=="^")	
+	{
+	var x= Math.pow(num1,num2);
+	var y=document.getElementById("tt");
+	y.value="";
+	y.value= y.value+ x;
+	}
+	
+	
+}
+
+</script>
+</head>
+<body>
+<table name="calc" border="0">
+<tr >
+<td colspan="7"><input type="text" id="tt" name="input"></td>
+</tr>
+<tr>
+<td><button id="b" type="button" onclick="fact()">x!</button></td>
+<td><button id="b" type="button" onclick="root()">Root</button></td>
+<td><button id="b" type="button" onclick="cube()">x^3</button></td>
+
+<td><button id="b" type="button" onclick="clr()">C</button></td>
+<td><button id="b" type="button" onclick="op('/')">/</button></td>
+<td><button id="b" type="button" onclick="op('*')">*</button></td>
+<td><button id="b" type="button" onclick="back()">Back</button></td>
+</tr>
+
+<tr>
+
+<td><button id="b" type="button" onclick="sin()">sin</button></td>
+<td><button id="b" type="button" onclick="cos()">cos</button></td>
+<td><button id="b" type="button" onclick="tan()">tan</button></td>
+
+<td><button id="b" type="button" onclick="fcal('7')">7</button></td>
+<td><button id="b" type="button" onclick="fcal('8')">8</button></td>
+<td><button id="b" type="button" onclick="fcal('9')">9</button></td>
+<td><button id="b" type="button" onclick="op('-')">-</button></td>
+</tr>
+
+<tr>
+
+<td><button id="b" type="button" onclick="ln()">ln</button></td>
+<td><button id="b" type="button" onclick="log()">log</button></td>
+<td><button id="b" type="button" onclick="inv()">1/x</button></td>
+
+<td><button id="b" type="button" onclick="fcal('4')">4</button></td>
+<td><button id="b" type="button" onclick="fcal('5')">5</button></td>
+<td><button id="b" type="button" onclick="fcal('6')">6</button></td>
+<td><button id="b" type="button" onclick="op('+')">+</button></td>
+</tr>
+
+<tr>
+
+<td><button id="b" type="button">e^x</button></td>
+<td><button id="b" type="button" onclick="square()">x^2</button></td>
+<td><button id="b" type="button" onclick="op('^')">y^x</button></td>
+
+<td><button id="b" type="button" onclick="fcal('1')">1</button></td>
+<td><button id="b" type="button" onclick="fcal('2')">2</button></td>
+<td><button id="b" type="button" onclick="fcal('3')">3</button></td>
+<td><button id="b" type="button">()</button></td>
+</tr>
+
+<tr>
+
+<td><button id="b" type="button" onclick="abso()">|x|</button></td>
+<td><button id="b" type="button" onclick="fcal(Math.PI)">pi</button></td>
+<td><button id="b" type="button">E</button></td>
+
+<td><button id="b" type="button" onclick="fcal('0')">0</button></td>
+<td><button id="b" type="button" onclick="fcal('.')">.</button></td>
+<td><button id="b" type="button" onclick="fcal('-')">+/-</button></td>
+<td><button id="b" type="button" onclick="equal()">=</button></td>
+</tr>
+
+
+
+</table>
+</body>
+</html>

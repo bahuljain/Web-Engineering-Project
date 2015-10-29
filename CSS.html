@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>CSS Styling</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<style>
+			#embedded{
+				border:1px solid black;
+				border-radius: 20px;
+				background:yellow;
+				margin:30px;
+				padding:10px;
+				height:20%; 
+				width:25%;
+			}
+		</style>	
+	</head>
+	<body>
+		<div id="inline" style="z-index:20;border-radius: 20px;border:1px solid black; height:20%; width:25%; background:red; margin:30px; padding:10px;">This is edited using Inline CSS</div>
+		
+		<div id="embedded">This is edited using Embedded CSS</div>
+		
+		<div id="external">This is edited using External CSS</div>
+	</body>
+</html>

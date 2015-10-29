@@ -1,0 +1,187 @@
+*{margin:0;padding:0px;}
+
+body{
+	background: rgba(238,238,238,1);
+	margin:0px;
+	padding: 0px;
+}
+
+.main{
+	margin: 0px auto 0px auto;
+	width: 1020px;
+}
+
+.head {
+	position:relative;
+	margin: 5px 0px 20px 20px;
+	background: rgba(240,240,240,0.0);
+	width:780;
+	height:90px;
+}
+
+#logo{position:relative;float: left; margin-bottom:10px;} 
+#calls{float: left; width: 350px; margin-right:90px; margin-left: 110px; }
+#callimg{margin-right: 5px;}
+#number{float:left; font-size: 22px; font-weight: bold;}
+#reg{margin:2px 2px 10px 2px; height:40px; width: 150px; font-size: 14px;}
+
+hr{
+	width:100%;
+    border: 0;
+    height: 0.5px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0)); 
+}
+
+.container {
+		margin-top: 15px;
+		position: relative;
+		width: 100%;
+}
+
+.area{
+	position: relative;
+	border-radius:5px;
+	box-shadow: 0px 0px 8px 2px #888888;
+	padding: 20px;
+	width:350px;
+	height:300px;
+	margin-right: 20px;
+	margin-top:0px;
+	top:-5px;
+}
+
+.area input, select{
+	height: 30px;
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.area select {
+	margin-bottom: 10px;
+}
+
+.area span{
+	font-weight:bold;
+	font-size: 18px;
+}
+
+#button {
+	height: 44px;
+	width : 100%;	
+	color: white;
+	margin-top:10px;
+	font-size: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74DF00', endColorstr='#5FB404'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#74DF00), to(#5FB404)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #74DF00,  #5FB404); /* for firefox 3.6+ */
+}
+
+#button a {
+	text-decoration: none;
+	color:white;
+}
+
+#button:hover{
+	background: #5FB404;
+}
+
+
+.steps{
+	margin-top: 25px;
+	position:  relative;
+	width: 100%;
+}
+
+.steps table{
+	width: 100%;
+}
+
+#a1{
+	position:absolute;
+	z-index: 50;
+	top: 50px;
+	left: 220px;
+}
+
+#a2{
+	position:absolute;
+	z-index: 50;
+	top: 50px;
+	left: 490px;
+}
+
+#a3{
+	position:absolute;
+	z-index: 50;
+	top: 50px;
+	left: 760px;
+}
+
+#step1, #step2, #step3, #step4{
+	background: white;
+	margin-right:37px;
+	width:220px;
+	height: 150px;
+	position: relative;
+	border-radius: 5px;
+	padding: 5px;
+		box-shadow: 0px 0px 8px 2px #888888;
+}
+
+#step4{
+	margin-right: 0px;
+}
+
+.cuisines{
+	position:relative ;
+	width: 100%;
+	margin-top:25px;
+	padding: 10px;
+	background: white;
+	border-radius: 5px;	
+		box-shadow: 0px 0px 8px 2px #888888;
+}
+
+.cuisines table td{
+	text-align: center;
+}
+.bottom
+{
+padding: 15px;
+margin-top: 25px;
+position:relative;
+width:99%;
+background-color: white;
+border-radius:5px;
+margin-bottom: 10px;
+	box-shadow: 0px 0px 8px 2px #888888;
+}
+
+.bottom table{
+	border-collapse: collapse;
+}
+
+.bottom table td {
+	width:43.5%;
+	padding-left: 15px;
+	padding-top: 3px;
+	
+}
+
+.shift
+{
+
+	font-family:"Times New Roman";
+    font-size:20px;
+}
+
+.bottom a{
+	color:black;
+	text-decoration:none;
+}
